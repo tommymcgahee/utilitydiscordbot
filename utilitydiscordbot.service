@@ -1,0 +1,14 @@
+[Unit]
+Description=Utility Discord Bot - Discord bot to manage a Discord server.
+Documentation=https://github.com/tommymcgahee/utilitydiscordbot
+After=network.target
+
+[Service]
+Type=simple
+User=utilitybot
+WorkingDirectory=/opt/bots/utilitydiscordbot
+ExecStart=/usr/bin/node /opt/bots/utilitydiscordbot/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

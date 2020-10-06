@@ -1,0 +1,27 @@
+{
+  "name": "utilitydiscordbot",
+  "version": "1.0.0",
+  "description": "Discord bot to manage a Discord server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install",
+    "development": "nodemon index.js",
+    "production": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommymcgahee/utilitydiscordbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommymcgahee/utilitydiscordbot/issues"
+  },
+  "homepage": "https://github.com/tommymcgahee/utilitydiscordbot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "eslint": "^7.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
