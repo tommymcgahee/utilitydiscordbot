@@ -1,5 +1,5 @@
 const fs = require('fs'); 
-const { prefix, token, commands, channel } = require('./config.json');
+const { prefix, token, commands, channel, bot_mechanic_channel } = require('./config.json');
 
 const { Client, MessageEmbed } = require('discord.js');
 const client = new Client(); 
@@ -21,7 +21,7 @@ const getUserFromMention = mention => {
 
 client.once('ready', () => {
 	console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
-  	client.user.setActivity(`${client.guilds.cache.size} House(s)`, { type: 'WATCHING' });
+	client.user.setActivity(`${client.guilds.cache.size} House(s)`, { type: 'WATCHING' }); 
 });
 
 client.on('message', async message => {
@@ -40,13 +40,18 @@ client.on('message', async message => {
 			if (!mentionedUser) {
 				return message.reply('Please use a proper mention if you want to set a nickname.');
 			}
+			console.log(mentionedUser);
+			const oldNickname = message.guild.members.cache.find(user => user.id === mentionedUser.id).displayName;
 			const newNickname = args.slice(1).join(" ");
+
 			message.guild.members.cache.find(user => user.id === mentionedUser.id).setNickname(newNickname);
+			
 			const embed = new MessageEmbed()
 			.setTitle('ATTN: A nickname has been changed')
 			.setColor(0xff0000)
-			.setDescription(`I, <@!${client.user.id}>, have allowed <@!${message.author.id}> to change <@!${mentionedUser.id}>'s nickname to ${args[1]}.`);
+			.setDescription(`I, <@!${client.user.id}>, have allowed <@!${message.author.id}> to change ${oldNickname}'s (${mentionedUser.username}) nickname to ${newNickname}.`);
 			// Send the embed to the same channel as the message
+			// client.channels.cache.get(bot_mechanic_channel).send(embed); // bot testing channel
 			client.channels.cache.get(channel).send(embed);
 		}
 	}
