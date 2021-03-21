@@ -16,7 +16,7 @@ Use this [discordjs guide](https://discordjs.guide/preparations/setting-up-a-bot
 
 ## Requirements
 
-Currently compatible with [Node.js 10, 12 and 14](https://github.com/tommymcgahee/utilitydiscordbot/actions?query=workflow%3ANode). 
+Currently compatible with [Node.js 10, 12, 14 and 15](https://github.com/tommymcgahee/utilitydiscordbot/actions?query=workflow%3ANode). 
 
 ## Docker Requirements
 
