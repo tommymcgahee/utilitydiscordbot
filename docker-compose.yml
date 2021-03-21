@@ -1,7 +1,8 @@
 version: "3"
 services:
-  nodejs:
+  bot:
     build: . 
-    container_name: utilitybot
+    image: tommymcgahee/utilitydiscordbot
+    container_name: discord-utility-bot
     environment:
       - NODE_ENV=production

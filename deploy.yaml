@@ -13,7 +13,9 @@ spec:
         app: "nodejs"
     spec:
       containers:
-      - name: "discord-utility-bot"
-        image: "tomster2300/utilitydiscordbot-armv7:1.0"
-        ports:
-        - containerPort: 3000
+        - name: "discord-utility-bot"
+          image: "ghcr.io/tommymcgahee/utilitydiscordbot:latest"
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: github-container-registry-secret

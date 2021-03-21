@@ -2,5 +2,6 @@
     "prefix": "!", 
     "token": "your-token-goes-here", 
     "commands": ["changenick"], 
-    "channel": "ID-of-your-gaming-channel-goes-here"
+    "channel": "ID-of-your-gaming-channel-goes-here",
+    "bot_mechanic_channel": ""
 }

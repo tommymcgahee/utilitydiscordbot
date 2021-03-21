@@ -1,4 +1,5 @@
 FROM arm32v7/node:12
+ENV NODE_ENV=production
 
 RUN mkdir /home/node/app/ && chown -R node:node /home/node/app
 
@@ -10,4 +11,4 @@ RUN npm install --only=production --loglevel=error
 
 COPY --chown=node:node . .
 
-CMD ["/bin/bash", "-c", "/usr/local/bin/npm run production"]
+CMD ["/bin/bash", "-c", "/usr/local/bin/npm run $NODE_ENV"]
