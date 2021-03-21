@@ -1,0 +1,19 @@
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "discord-utility-bot"
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: "nodejs"
+  template:
+    metadata:
+      labels:
+        app: "nodejs"
+    spec:
+      containers:
+      - name: "discord-utility-bot"
+        image: "tomster2300/utilitydiscordbot-armv7:1.0"
+        ports:
+        - containerPort: 3000
