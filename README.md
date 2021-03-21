@@ -20,7 +20,7 @@ Currently compatible with [Node.js 10, 12 and 14](https://github.com/tommymcgahe
 
 ## Docker Requirements
 
-`Docker Compose` is required. 
+`Docker Compose` is recommended but not required. 
 
 To run nodemon and set `NODE_ENV` to development:  
 `docker-compose -f docker-compose.yml -f development.yml up`
