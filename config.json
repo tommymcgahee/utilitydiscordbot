@@ -1,0 +1,7 @@
+{
+    "prefix": "!", 
+    "token": "${{ secrets.DISCORD_APP_TOKEN }}", 
+    "commands": ["changenick"], 
+    "channel": "${{ secrets.CHANNEL_ID }}",
+    "bot_mechanic_channel": "${{ secrets.BOT_CHANNEL }}"
+}
