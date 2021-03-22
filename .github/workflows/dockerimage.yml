@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - 
+        env: 
+        DISCORD_APP_TOKEN: ${{ secrets.DISCORD_APP_TOKEN }}
+        CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+        BOT_CHANNEL: ${{ secrets.BOT_CHANNEL }}\
+
+      - 
         name: Checkout
         uses: actions/checkout@v2
       - 
