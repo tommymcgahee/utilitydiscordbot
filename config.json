@@ -1,7 +1,7 @@
 {
     "prefix": "!", 
-    "token": "$DISCORD_APP_TOKEN", 
+    "token": "", 
     "commands": ["changenick"], 
-    "channel": "$CHANNEL_ID",
-    "bot_mechanic_channel": "$BOT_CHANNEL"
+    "channel": "",
+    "bot_mechanic_channel": ""
 }
