@@ -45,3 +45,5 @@ To run nodemon, mount the host directory and set `NODE_ENV` to development with 
 
 To run without `docker compose`:  
 ``docker run -d --env NODE_ENV=development -v `pwd`/:/home/node/app -v /home/node/app/node_modules name/project:tag``
+
+This is a test.
